@@ -1,4 +1,4 @@
-.PHONY: help build build-local up up-build down logs ps, prune
+.PHONY: help build build-local watch down logs ps prune
 .DEFAULT_GOAL := help
 
 DOCKER_TAG := latest
