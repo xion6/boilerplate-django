@@ -11,6 +11,9 @@ build-local: ## Build docker image to local development
 up: ## Do docker compose up with hot reload
 	docker compose up -d
 
+clean-up: ## Do docker compose up with hot reload
+	docker compose up --build -d
+
 down: ## Do docker compose down
 	docker compose down
 
