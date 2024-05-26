@@ -1,4 +1,4 @@
-.PHONY: help build build-local up down logs ps, prune
+.PHONY: help build build-local up up-build down logs ps, prune
 .DEFAULT_GOAL := help
 
 DOCKER_TAG := latest
@@ -11,8 +11,11 @@ build-local: ## Build docker image to local development
 up: ## Do docker compose up with hot reload
 	docker compose up -d
 
-clean-up: ## Do docker compose up with hot reload
+up-build: ## Do docker compose up with hot reload
 	docker compose up --build -d
+
+watch: ## Do docker compose up with hot reload
+	docker compose up --watch
 
 down: ## Do docker compose down
 	docker compose down
