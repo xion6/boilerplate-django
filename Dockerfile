@@ -14,6 +14,8 @@ EXPOSE 8000
 
 RUN <<EOF
 apt-get update
+apt install git vim curl -y
+apt clean
 EOF
 
 RUN <<EOF

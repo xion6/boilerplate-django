@@ -1,3 +1,2 @@
 django
 psycopg
-load_dotenv
