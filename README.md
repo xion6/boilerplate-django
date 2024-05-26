@@ -12,5 +12,6 @@ cp .env.example .env
 ```
 
 ```sh
+make build-local
 make up
 ```
