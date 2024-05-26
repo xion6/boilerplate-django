@@ -68,6 +68,17 @@ services:
     ports:
       - 6379:6379
 
+  ngrok:
+    image: ngrok/ngrok
+    restart: unless-stopped
+    command: ['http', 'web:8000']
+    ports:
+      - 4040:4040
+    depends_on:
+      - web
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+
 volumes:
   db_data:
   minio_data:
